@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap');
+ *, *::before, *::after {
+	 box-sizing: border-box;
+	 color: inherit;
+	 list-style: none;
+}
+ html, body {
+	 margin: 0;
+	 padding: 0;
+	 font-family: 'Noto Sans TC', sans-serif;
+}
+ img {
+	 width: 100%;
+	 vertical-align: middle;
+}
+ a {
+	 text-decoration: none;
+}	
+ main {
+	 display: block;
+	 max-width: 100%;
+	 /* height: 100vh; */
+}
+ #app {
+	 width: 100%;
+	 padding-top: 54.167%;
+	 position: relative;
+	 overflow: hidden;
+	 background-color: #000;
+}
+ .progress {
+	 width: 0;
+	 height: 5px;
+	 background-color: #f0ad30;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 z-index: 9;
+	 transition: 1s;
+}
+ .card {
+	 width: 200px;
+	 height: 350px;		
+	 position: absolute;
+	 bottom: 50px;
+	 border-radius: 10px;
+	 padding: 24px 16px;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+	 background-position: center center;
+	 background-size: cover;
+	 box-shadow: inset 0 0 100vw 100vw rgba(0, 0, 0, 0.3), 0 16px 8px -8px rgba(0, 0, 0, 0.4);
+	 transition: 2s;
+}
+
+.card__text-sm {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+	font-size: 10px;
+	font-weight: lighter;
+    margin: 0;
+    padding: 16px 0 8px;
+    position: relative;
+}
+.card__text-sm::before {
+    content: "";
+    background: #fff;
+    height: 1px;
+    width: 16px;
+    position: absolute;
+    top: 0;
+}
+.card__text-lg {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 1.2;
+    width: 100%;
+    margin: 0;
+}
+
+[data-index="0"] .card_textt{
+	position: relative;
+	overflow: hidden;
+	width: 350px;
+	height: 300px;
+}
+
+[data-index="0"] .card_textt .card__text-lg{
+	position: absolute;
+	font-family: 'Oswald', sans-serif;
+	font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 1.4px;
+	
+}
+
+[data-index="0"] .card_textt .card__text-sm{
+	font-size: 24px;
+	/* margin-bottom: 10px; */
+}
+
+[data-index="0"] .card_textt .card__text-sm::before{
+	width: 24px;
+    height: 2px;
+}
+
+
+ .card:nth-child(2) {
+	 background-image: url('beach-min.jpg');
+	 z-index: 4;
+}
+ .card:nth-child(3) {
+	 background-image: url('Yosemito-min.jpg');
+	 z-index: 4;
+}
+ .card:nth-child(4) { 
+	 background-image: url('gorume_valley-min.jpg');
+	 z-index: 4;
+}
+ .card:nth-child(5) {
+	 background-image: url('japan_alps-min.jpg');
+	 z-index: 4;
+}
+ .card:nth-child(6) {
+	 background-image: url('marokash-min.jpg');
+	 z-index: 4;
+}
+ .card:nth-child(7) {
+	 background-image: url('shvetsariya_alps-min.jpg');
+	 z-index: 4;
+}
+ .card[data-index="1"] {
+	 left: 540px;
+}
+ .card[data-index="2"] {
+	 left: 810px;
+}
+ .card[data-index="3"] {
+	 left: 1080px;
+}
+ .card[data-index="4"] {
+	 left: 1350px;
+}
+ .card h3 {
+	 margin: 0;
+	 position: absolute;
+	 left: 8%;
+	 bottom: 8%;
+	 font-size: 3rem;
+	 line-height: 1.5;
+	 letter-spacing: 1px;
+	 color: #fff;
+	 opacity: 0;
+	 transition: 0.5s;
+	 text-shadow: black 5px 5px 2px;
+}
+ .card[data-index='0'], .card[data-index='5'] {
+	 width: 100%;
+	 height: 100%;
+	 bottom: 0;
+	 left: 0;
+	 border-radius: 0;
+	 box-shadow: none;
+	 z-index: 2;
+}
+ .card[data-index='5'], .card[data-index='4'] {
+	 opacity: 0;
+	 z-index: 1;
+}
+ .card[data-index='1'] {
+	 z-index: 3;
+}
+ 
